@@ -1,3 +1,4 @@
+ifeq ($(strip $(BOARD_USES_TSLIB)),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -93,3 +94,4 @@ LOCAL_CFLAGS := -DPLUGIN_DIR=\"/system/lib/$(TS_PLUG)\" -DTS_CONF=\"/etc/$(TS_CO
 
 include $(BUILD_EXECUTABLE)
 
+endif
